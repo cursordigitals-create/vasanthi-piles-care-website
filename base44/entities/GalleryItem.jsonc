@@ -1,0 +1,41 @@
+{
+  "name": "GalleryItem",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the gallery item"
+    },
+    "mediaUrl": {
+      "type": "string",
+      "description": "URL of the uploaded image or video"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "video",
+        "image"
+      ],
+      "description": "Type of media"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "testimonial",
+        "gallery"
+      ],
+      "description": "Category of the media"
+    },
+    "showTitle": {
+      "type": "boolean",
+      "description": "Whether to show the title in the home page",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "mediaUrl",
+    "type",
+    "category"
+  ]
+}
